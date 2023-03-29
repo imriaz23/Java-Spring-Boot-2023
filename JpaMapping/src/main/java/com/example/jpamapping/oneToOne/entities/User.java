@@ -1,9 +1,7 @@
 package com.example.jpamapping.oneToOne.entities;
 
-import com.example.jpamapping.oneToOne.entities.Profile;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
-import lombok.Builder;
 import lombok.Data;
 
 @Entity

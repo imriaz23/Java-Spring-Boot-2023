@@ -1,13 +1,15 @@
 package com.example.jpamapping;
 
-import com.example.jpamapping.oneToOne.entities.Profile;import com.example.jpamapping.oneToOne.entities.User;import com.example.jpamapping.oneToOne.repository.UserRepository;
+import com.example.jpamapping.oneToOne.entities.Profile;
+import com.example.jpamapping.oneToOne.entities.User;
+import com.example.jpamapping.oneToOne.repository.UserRepository;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;import org.springframework.boot.CommandLineRunner;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
 public class JpaMappingApplication implements CommandLineRunner {
