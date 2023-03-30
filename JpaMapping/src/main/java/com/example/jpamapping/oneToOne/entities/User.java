@@ -1,6 +1,6 @@
 package com.example.jpamapping.oneToOne.entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -11,9 +11,8 @@ public class User {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @OneToOne(cascade = CascadeType.PERSIST)
-  @JoinColumn(name = "profile_id")
-  @JsonBackReference
+  @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+  @JsonManagedReference
   private Profile profile;
 
   @Column private String firstName;
