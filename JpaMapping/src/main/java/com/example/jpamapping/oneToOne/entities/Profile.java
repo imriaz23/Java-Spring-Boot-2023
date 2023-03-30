@@ -1,6 +1,6 @@
 package com.example.jpamapping.oneToOne.entities;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -13,6 +13,6 @@ public class Profile {
 
   @OneToOne
   @JoinColumn(name = "user_id")
-  @JsonManagedReference
+  @JsonBackReference
   private User user;
   }
