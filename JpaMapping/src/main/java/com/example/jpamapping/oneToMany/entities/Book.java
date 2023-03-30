@@ -11,10 +11,9 @@ public class Book {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-    @Column
-    private String title;
+  @Column private String title;
 
-  @ManyToOne
+  @ManyToOne(fetch = FetchType.EAGER)
   @JoinColumn(name = "author_id")
   @JsonBackReference
   private Author author;
