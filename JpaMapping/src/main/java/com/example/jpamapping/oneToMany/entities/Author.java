@@ -15,7 +15,7 @@ public class Author {
 
   @Column private String name;
 
-  @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+  @OneToMany(mappedBy = "author",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
   @JsonManagedReference
   private List<Book> books = new ArrayList<>();
 }
