@@ -17,6 +17,6 @@ public class MAuthor {
 
   @ManyToMany(mappedBy = "authors", fetch = FetchType.EAGER)
   @Cascade({CascadeType.SAVE_UPDATE, CascadeType.MERGE, CascadeType.PERSIST})
-//  @JsonManagedReference
+  //  @JsonManagedReference
   private List<MBook> books = new ArrayList<>();
 }
