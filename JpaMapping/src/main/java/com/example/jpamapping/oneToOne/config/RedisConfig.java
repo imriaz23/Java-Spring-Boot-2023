@@ -23,27 +23,29 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @AutoConfigureAfter(RedisAutoConfiguration.class)
 @EnableCaching
 public class RedisConfig {
-  @Autowired @Lazy private CacheManager cacheManager;
+  @Autowired
+  @Lazy
+  private CacheManager cacheManager;
 
-    @Value("${spring.data.redis.host}")
-    private String redisHost;
+  @Value("${spring.data.redis.host}")
+  private String redisHost;
 
-    @Value("${spring.data.redis.port}")
-    private int redisPort;
+  @Value("${spring.data.redis.port}")
+  private int redisPort;
 
   @Bean
   public RedisTemplate<String, Serializable> redisCacheTemplate(
       LettuceConnectionFactory redisConnectionFactory) {
-        RedisTemplate<String, Serializable> template = new RedisTemplate<>();
+    RedisTemplate<String, Serializable> template = new RedisTemplate<>();
     template.setKeySerializer(new StringRedisSerializer());
     template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
-        template.setConnectionFactory(redisConnectionFactory);
-        return template;
-    }
+    template.setConnectionFactory(redisConnectionFactory);
+    return template;
+  }
 
   @Bean
   public CacheManager cacheManager(RedisConnectionFactory factory) {
-        RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig();
+    RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig();
     RedisCacheConfiguration redisCacheConfiguration =
         config
             .serializeKeysWith(
@@ -52,8 +54,9 @@ public class RedisConfig {
             .serializeValuesWith(
                 RedisSerializationContext.SerializationPair.fromSerializer(
                     new GenericJackson2JsonRedisSerializer()));
-        RedisCacheManager redisCacheManager = RedisCacheManager.builder(factory).cacheDefaults(redisCacheConfiguration)
-                .build();
-        return redisCacheManager;
-    }
+    RedisCacheManager redisCacheManager =
+        RedisCacheManager.builder(factory).cacheDefaults(redisCacheConfiguration)
+            .build();
+    return redisCacheManager;
+  }
 }

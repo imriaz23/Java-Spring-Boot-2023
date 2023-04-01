@@ -17,18 +17,20 @@ public class JpaMappingApplication implements CommandLineRunner {
   @Autowired
   UserService userService;
 
-    public static void main(String[] args) {
-        SpringApplication.run(JpaMappingApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(JpaMappingApplication.class, args);
+  }
 
-@Override public void run(String... args)throws Exception {
-        User user = new User();
-        user.setFirstName(RandomStringUtils.randomAlphabetic(5));
-        user.setLastname(RandomStringUtils.randomAlphabetic(7));
-        Profile profile = new Profile();
-        profile.setUser(user);
-        user.setProfile(profile);
-        userService.save(user);
-        Long id = 1L;
+  @Override
+  public void run(String... args) throws Exception {
+    User user = new User();
+    user.setFirstName(RandomStringUtils.randomAlphabetic(5));
+    user.setLastname(RandomStringUtils.randomAlphabetic(7));
+    Profile profile = new Profile();
+    profile.setUser(user);
+    user.setProfile(profile);
+    userService.save(user);
+    Long id = 1L;
 //        logger.info("ebfwoie {}",userRepository.findById(id).get().getProfile().getId());
-    }}
+  }
+}

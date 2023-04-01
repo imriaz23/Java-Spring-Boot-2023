@@ -9,16 +9,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/vehicle") public class VehicleController {
+@RequestMapping("/vehicle")
+public class VehicleController {
 
-    @Autowired VechicleService vechicleService;
+  @Autowired
+  VechicleService vechicleService;
 
-    @GetMapping("/get") public ResponseEntity<?> getVehicles(){
-        return ResponseEntity.ok(vechicleService.getVehicles());
-    }
-    @GetMapping("/get/pageable")
-    public ResponseEntity<?> getVehiclesInPageable(CarPage carPage){
+  @GetMapping("/get")
+  public ResponseEntity<?> getVehicles() {
+    return ResponseEntity.ok(vechicleService.getVehicles());
+  }
 
-        return ResponseEntity.ok(vechicleService .getCars(carPage));
-    }
+  @GetMapping("/get/pageable")
+  public ResponseEntity<?> getVehiclesInPageable(CarPage carPage) {
+
+    return ResponseEntity.ok(vechicleService.getCars(carPage));
+  }
 }

@@ -5,4 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
 @NoRepositoryBean
-public interface VeichleRepository extends JpaRepository<Vehicle, Long> {}
+public interface VeichleRepository<T> extends JpaRepository<T, Long> {
+}

@@ -1,6 +1,7 @@
 package com.example.jpamapping.oneToOne.services;
 
 import com.example.jpamapping.oneToOne.entities.User;
+import com.example.jpamapping.oneToOne.exceptions.UserNotFoundException;
 import com.example.jpamapping.oneToOne.repository.UserRepository;
 import java.util.Optional;
 import org.slf4j.Logger;
@@ -20,15 +21,18 @@ public class UserService {
 
   @Cacheable(cacheNames = "user")
   public User getUser(Long id) {
-      Optional<User> optionalUser = userRepository.findById(id);
-      if(optionalUser.isPresent()){
-          logger.info("fnwkfw efhweoifw {}",optionalUser.get().getProfile().getId());
-          return optionalUser.get();
-      }
-      return optionalUser.orElseThrow();
+    Optional<User> optionalUser = userRepository.findById(id);
+    if (optionalUser.isPresent()) {
+      logger.info("fnwkfw efhweoifw {}", optionalUser.get().getProfile().getId());
+      return optionalUser.get();
+    }
+    else{
+      throw new UserNotFoundException("user not found exception ");
+    }
   }
-  @CacheEvict(cacheNames = "user",allEntries = true)
-    public void save(User user){
-      userRepository.save(user);
+
+  @CacheEvict(cacheNames = "user", allEntries = true)
+  public void save(User user) {
+    userRepository.save(user);
   }
 }

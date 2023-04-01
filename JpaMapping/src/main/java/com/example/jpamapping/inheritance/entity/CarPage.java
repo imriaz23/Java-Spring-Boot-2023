@@ -5,9 +5,9 @@ import org.springframework.data.domain.Sort;
 
 @Data
 public class CarPage {
-    private int pageNumber = 0;
+  private int pageNumber = 0;
   private int pageSize = 10;
-    private Sort.Direction sortDirection = Sort.Direction.ASC;
-    private String sortBy = "amount";
+  private Sort.Direction sortDirection = Sort.Direction.ASC;
+  private String sortBy = "amount";
 
 }

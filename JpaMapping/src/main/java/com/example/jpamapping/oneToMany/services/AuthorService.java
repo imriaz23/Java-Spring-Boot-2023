@@ -9,22 +9,22 @@ import org.springframework.stereotype.Service;
 @Service
 //@CacheConfig(cacheNames = "authorCache")
 public class AuthorService {
-    @Autowired
-    AuthorRepository authorRepository;
+  @Autowired
+  AuthorRepository authorRepository;
 
-//  @Cacheable(cacheNames = "authors")
+  //  @Cacheable(cacheNames = "authors")
   public Author getAuthor(Long id) {
-        Optional<Author> optionalAuthor = authorRepository.findById(id);
-        if(optionalAuthor.isPresent()){
-            return optionalAuthor.get();
-        }
-        return optionalAuthor.orElseThrow();
+    Optional<Author> optionalAuthor = authorRepository.findById(id);
+    if (optionalAuthor.isPresent()) {
+      return optionalAuthor.get();
     }
+    return optionalAuthor.orElseThrow();
+  }
 
 //  @CacheEvict(cacheNames = "authors",allEntries = true)
 
   public boolean saveAuthor(Author author) {
-        authorRepository.save(author);
-        return true;
-    }
+    authorRepository.save(author);
+    return true;
+  }
 }

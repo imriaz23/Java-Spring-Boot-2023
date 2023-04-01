@@ -15,22 +15,26 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 @Service
-@CacheConfig(cacheNames = "vehicle_cache") public class VechicleService {
-    @Autowired VeichleRepository veichleRepository;
+@CacheConfig(cacheNames = "vehicle_cache")
+public class VechicleService {
+  @Autowired
+  VeichleRepository veichleRepository;
 
   @Cacheable(cacheNames = "vehicles")
   public List<Vehicle> getVehicles() {
-        return veichleRepository.findAll();
-    }
-    @CacheEvict(cacheNames = "vehicles",allEntries = true)
-    public void save(List<Vehicle> vehicles){
-        veichleRepository.saveAll(vehicles);
-    }
-//    @Cacheable(cacheNames = "vehicles")
-    public Page<Vehicle> getCars(CarPage carPage){
-      Sort sort = Sort.by(carPage.getSortDirection(),carPage.getSortBy());
+    return veichleRepository.findAll();
+  }
 
-    Pageable pageable = PageRequest.of(carPage.getPageNumber(),carPage.getPageSize(),sort);
-        return veichleRepository.findAll(pageable);
-    }
+  @CacheEvict(cacheNames = "vehicles", allEntries = true)
+  public void save(List<Vehicle> vehicles) {
+    veichleRepository.saveAll(vehicles);
+  }
+
+  //    @Cacheable(cacheNames = "vehicles")
+  public Page<Vehicle> getCars(CarPage carPage) {
+    Sort sort = Sort.by(carPage.getSortDirection(), carPage.getSortBy());
+
+    Pageable pageable = PageRequest.of(carPage.getPageNumber(), carPage.getPageSize(), sort);
+    return veichleRepository.findAll(pageable);
+  }
 }

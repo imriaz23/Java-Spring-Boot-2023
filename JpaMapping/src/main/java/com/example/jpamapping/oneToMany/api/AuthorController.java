@@ -10,11 +10,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/author") public class AuthorController {
-  @Autowired AuthorService authorService;
+@RequestMapping("/author")
+public class AuthorController {
+  @Autowired
+  AuthorService authorService;
+
   @GetMapping("/get/{id}")
   public ResponseEntity<Author> getAuthor(@PathVariable Long id) {
-      Author author = authorService.getAuthor(id);
-      return ResponseEntity.ok(author);
+    Author author = authorService.getAuthor(id);
+    return ResponseEntity.ok(author);
   }
+
 }
