@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7a588a1b-d4d0-4e8d-9de8-abf2b14d67ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../mercedes-benz-vintage-car-show/src/main/java/com/mercedesbenz/vintage/carshow/Entity/TestCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mercedes-benz-vintage-car-show/src/main/java/com/mercedesbenz/vintage/carshow/Entity/TestCaseMapWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mercedes-benz-vintage-car-show/src/main/java/com/mercedesbenz/vintage/carshow/Entity/TestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mercedes-benz-vintage-car-show/src/main/java/com/mercedesbenz/vintage/carshow/api/DisparitiesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mercedes-benz-vintage-car-show/src/main/java/com/mercedesbenz/vintage/carshow/config/AsuncConfigure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mercedes-benz-vintage-car-show/src/main/java/com/mercedesbenz/vintage/carshow/playload/RequestPayLoad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mercedes-benz-vintage-car-show/src/main/java/com/mercedesbenz/vintage/carshow/playload/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mercedes-benz-vintage-car-show/src/main/java/com/mercedesbenz/vintage/carshow/service/DisparitiesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mercedes-benz-vintage-car-show/src/main/java/com/mercedesbenz/vintage/carshow/service/Te.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/Compact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/DisplayBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/Entrance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/Exit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/Handicapped.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/Large.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/MotorCycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/ParkingAttendant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/ParkingSpot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/ParkingTicket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/Truck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/Van.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/entities/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/enums/AccountStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../parkinglot-LLD/src/main/java/com/lld/parkinglot/enums/PaymentStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swiggydesigncards" beforeDir="false" afterPath="$PROJECT_DIR$/../swiggydesigncards" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NrvCiw2NoH3rbvcVBMbb9iQTzc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="ParkinglotApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="parking-lot-lld" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.riaz.parkinglot.ParkinglotApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a588a1b-d4d0-4e8d-9de8-abf2b14d67ab" name="Changes" comment="" />
+      <created>1680434893830</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680434893830</updated>
+      <workItem from="1680434895042" duration="198000" />
+      <workItem from="1680637651192" duration="17000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
