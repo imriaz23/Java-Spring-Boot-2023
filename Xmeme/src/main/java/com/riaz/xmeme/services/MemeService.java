@@ -1,5 +1,6 @@
 package com.riaz.xmeme.services;
 
+import com.riaz.xmeme.GenerateMeme;
 import com.riaz.xmeme.entities.Meme;
 import com.riaz.xmeme.exceptions.DuplicatePostException;
 import com.riaz.xmeme.exceptions.MemeNotFoundExecption;
@@ -25,8 +26,10 @@ public class MemeService {
   private MemeRepository memeRepository;
   @Autowired
   private ModelMapper modelMapper;
+  @Autowired
+  GenerateMeme generateMeme;
 
-  @CacheEvict(cacheNames = "meme",allEntries = true)
+  @CacheEvict(cacheNames = "meme", allEntries = true)
   public MemeResponse createMemeAndSave(MemeRequest memeRequest) {
     if (isDuplicate(memeRequest)) {
       throw new DuplicatePostException("Could not completed the request meme already exist .");
@@ -54,10 +57,31 @@ public class MemeService {
     }
   }
 
+  @CacheEvict(cacheNames = "meme", allEntries = true)
+  public void deleteMemeById(String id) {
+    Optional<Meme> optionalMeme = memeRepository.findById(id);
+    if (optionalMeme.isEmpty()) {
+      throw new MemeNotFoundExecption("Could not complete the request, meme not found");
+    }
+    memeRepository.deleteById(id);
+  }
+
   public boolean isDuplicate(MemeRequest memeRequest) {
     Optional<Meme> meme =
         memeRepository.findMemesByUserNameAndAndCaptionAndAndUrl(memeRequest.getUsername(),
             memeRequest.getCaption(), memeRequest.getUrl());
     return meme.isPresent();
+  }
+
+  @CacheEvict(cacheNames = "meme", allEntries = true)
+  public List<Meme> saveAll() {
+    List<Meme> memes = generateMeme.generate();
+    List<Meme> memes1 = memeRepository.saveAll(memes);
+    logger.info("Inserted {} ", memes1.size());
+    return memes1;
+  }
+  @CacheEvict(cacheNames = "meme",allEntries = true)
+  public void deleteAll(){
+    memeRepository.deleteAll();
   }
 }

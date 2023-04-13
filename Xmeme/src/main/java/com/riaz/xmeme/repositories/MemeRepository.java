@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MemeRepository extends JpaRepository<Meme, String> {
-  @Query("SELECT m from Meme m ORDER BY m.createdAt DESC ")
+  @Query("SELECT m from Meme m ORDER BY m.createdAt DESC limit 100")
   List<Meme> findTop100ByOrderByCreatedAtDESC();
 
   Optional<Meme> findMemesByUserNameAndAndCaptionAndAndUrl(String userName, String caption,
